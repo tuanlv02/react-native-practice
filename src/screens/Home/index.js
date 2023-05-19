@@ -1,10 +1,19 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.flex1}>
       <View style={styles.container}>
         <Text style={styles.title}>Trang chủ</Text>
+
+        <Button
+          title="Go to product page"
+          onPress={() => {
+            navigation.navigate('Product', {
+              name: 'Lê Văn Tuân',
+            });
+          }}
+        />
       </View>
     </SafeAreaView>
   );
