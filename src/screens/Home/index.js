@@ -1,4 +1,11 @@
-import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Button,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Linking,
+} from 'react-native';
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -12,6 +19,15 @@ const HomeScreen = ({navigation}) => {
             navigation.navigate('Product', {
               name: 'Lê Văn Tuân',
             });
+          }}
+        />
+
+        <Button
+          title="Click me"
+          onPress={() => {
+            Linking.openURL(
+              'momo://app?action=payWithApp&isScanQR=true&serviceType=qr&sid=TU9NT3xjMzU5ODkwMS0wZmZjLTRmNGYtYTcyYS02ODkxZDIwMTYyZjY&v=2.3',
+            );
           }}
         />
       </View>
