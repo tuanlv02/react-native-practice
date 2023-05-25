@@ -23,10 +23,19 @@ const HomeScreen = ({navigation}) => {
         />
 
         <Button
-          title="Click me"
+          title="Deep link"
           onPress={() => {
             Linking.openURL(
-              'momo://app?action=payWithApp&isScanQR=true&serviceType=qr&sid=TU9NT3xjMzU5ODkwMS0wZmZjLTRmNGYtYTcyYS02ODkxZDIwMTYyZjY&v=2.3',
+              'momo://app?action=payWithApp&isScanQR=false&serviceType=app&sid=TU9NT3wwMTdkNDE3NS02MjQ2LTRjM2ItYWNjMy00NTQ3MjZhZTgyODI&v=2.3',
+            );
+          }}
+        />
+
+        <Button
+          title="QR code"
+          onPress={() => {
+            Linking.openURL(
+              'momo://app?action=payWithApp&isScanQR=true&serviceType=qr&sid=TU9NT3wwMTdkNDE3NS02MjQ2LTRjM2ItYWNjMy00NTQ3MjZhZTgyODI&v=2.3',
             );
           }}
         />
